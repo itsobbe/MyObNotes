@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="this.saveDetailForm()">
+    <ion-item>
+      <ion-label>Título</ion-label>
+      <ion-input type="text" [(ngModel)]="this.object.title" name="tite" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Nota</ion-label>
+      <ion-textarea rows="6" cols="20" [(ngModel)]="this.object.message" name="message" required></ion-textarea>
+    </ion-item>
+    <ion-button color="primary" type="submit"  expand="full">Guardar</ion-button>
+
+  </form>
+
+  <ion-fab *ngIf="this.object.id" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger"  (click)="deleteObject()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

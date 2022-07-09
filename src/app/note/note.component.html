@@ -1,0 +1,6 @@
+<ion-item *ngIf="note" [routerLink]="'/note/' + note.id">
+  <ion-label class="ion-text-wrap">
+    <h3>{{ note.title }}</h3>
+    <p>{{note.message}}</p>
+  </ion-label>
+</ion-item>
