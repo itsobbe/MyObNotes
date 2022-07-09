@@ -1,0 +1,7 @@
+{
+  "name": "MyObNotes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
