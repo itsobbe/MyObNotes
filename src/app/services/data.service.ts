@@ -68,7 +68,6 @@ export class DataService {
     let values = await this.getRows(objectName);
     let object = {};
     values.filter((obj) => {
-      console.log(obj);
       if (obj.id == id) {
         object = obj;
       }
